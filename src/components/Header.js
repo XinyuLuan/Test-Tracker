@@ -4,15 +4,16 @@ import PropTypes from "prop-types";
 import Button from "./Button";
 
 //prep to {title} distructure
-const Header = ({ title }) => {
-  const onClick = () => {
-    console.log("Click");
-  };
+const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header className="header">
       {/* <h1 style={headingStyle}>{title}</h1> */}
       <h1>{title}</h1>
-      <Button color="green" text="Add" onClick={onClick}></Button>
+      <Button
+        color={showAdd ? "red" : "green"}
+        text={showAdd ? "Close" : "Add"}
+        onClick={onAdd}
+      ></Button>
       {/* <Button color="blue" text="Hello"></Button>
       <Button color="red" text="Hello"></Button> */}
     </header>
