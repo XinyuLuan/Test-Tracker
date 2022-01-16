@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
 
 function App() {
+  const name = "Brad";
+  const x = true;
   return (
-    <div className="App">
-      <header className="App-header">
+    // Have to return single element
+    <div className="container">
+      {/* <h1>Hello word {name}</h1>
+      <h2>Hello {x ? "yes" : "No"}</h2> */}
+      <Header title="name" />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
